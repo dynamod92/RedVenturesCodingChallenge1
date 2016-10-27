@@ -6,14 +6,14 @@ body {
   padding-top: 130px; }
 
 .left-panel {
-  background-color: gray;
+  background-color: #49494b;
   width: 170px;
   height: 490px;
   display: inline-block;
   vertical-align: top; }
 
 .trans {
-  opacity: 0.3; }
+  opacity: 0.2; }
 
 .right-panel {
   background-color: #18a0ff;
@@ -27,7 +27,7 @@ body {
 .quote {
   position: absolute;
   top: 190px;
-  left: 370px; }
+  padding: 45px; }
 
 .quote-text {
   font-face: Arial;
@@ -49,18 +49,26 @@ body {
 .likes {
   background-color: #1690e5;
   border-radius: 17px;
-  width: 65px;
-  height: 30px;
-  position: absolute;
-  top: 150px;
-  right: 345px; }
+  margin: 10px;
+  padding: 5px;
+  width: 50px;
+  float: right; }
 
 .likes-text {
   font-style: arial;
   font-size: 10px;
   color: #FFFFFF;
-  font-weight: bold; }
+  font-weight: bold;
+  padding: 1px; }
 
 .arrow-container {
   position: absolute;
   bottom: 81px; }
+
+.arrow-right {
+  display: inline-block;
+  margin: 20px; }
+
+.arrow-left {
+  display: inline-block;
+  margin: 35px; }
