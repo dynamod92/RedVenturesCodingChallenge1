@@ -15,23 +15,21 @@
     </head>
     <body>
         <div class="container" align="center">
-            <div class="left-panel">
-                <img src="../img/sheldon-face.jpg" class="trans"/>
-                <div class="quote">
-                    <img src="../img/quotes.png" />
-                </div>
-                <div class="arrow-container">
-                    <div class="arrow-left">
-                        <img src="../img/left-arrow.png" />
-                    </div>
-                    <div class="arrow-right">
-                        <img src="../img/right-arrow.png" />
-                    </div>
-                </div>
+            <div class="slide left-panel">
+                <img src="img/sheldon-face.jpg" class="trans"/>
+                <div class="quote"><img src="img/quotes.png" /></div>
             </div>
+
+            <div class="slide left-panel"><img src="img/sheldon-face.jpg" class="trans"/>
+                <div class="quote"><img src="img/quotes.png" />second</div>
+            </div>
+
+            <a class="arrow-container" onclick="plusSlides(-1)"><img src="img/left-arrow.png" /></a>
+            <a class="arrow-container" onclick="plusSlides(1)"><img src="img/right-arrow.png" /></a>
+
             <div class="right-panel">
                 <div class="likes">
-                    <img src="../img/heart.png" />
+                    <img src="img/heart.png" />
                     <span class="likes-text">423</span>
                 </div>
                 <p class="quote-text">
@@ -41,8 +39,40 @@
                         - Sheldon Cooper
                     </span>
                 </p>
+                <p class="quote-text">
+                    Second Quote test
+                    <br />
+                    <span class="author-text">
+                        - Your face
+                    </span>
+                </p>
             </div>                    
         </div>
+        <script>
+        var index = 1;
+        changeSlides(index);
+
+        function plusSlides(n) {
+          changeSlides(index += n);
+        }
+
+        function currentSlide(n) {
+          changeSlides(index = n);
+        }
+
+        function changeSlides(n) {
+          var slides = document.getElementsByClassName("slide");
+          var text = document.getElementsByClassName("quote-text");
+
+          if (n > slides.length) {index = 1} 
+          if (n < 1) {index = slides.length}
+          for (var i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none"; 
+          }
+          slides[index-1].style.display = "inline-block"; 
+          text[index-1].style.display = "block";
+        }
+        </script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
     </body>

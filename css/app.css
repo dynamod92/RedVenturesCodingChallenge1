@@ -1,5 +1,5 @@
 body {
-  background-color: #FFFFFF; }
+  background-color: white; }
 
 .container {
   margin: auto;
@@ -20,7 +20,7 @@ body {
   width: 530px;
   height: 490px;
   display: inline-block;
-  margin-left: -4px;
+  margin-left: -39px;
   padding-left: 10px;
   vertical-align: top; }
 
@@ -62,13 +62,7 @@ body {
   padding: 1px; }
 
 .arrow-container {
-  position: absolute;
-  bottom: 81px; }
-
-.arrow-right {
-  display: inline-block;
-  margin: 20px; }
-
-.arrow-left {
-  display: inline-block;
-  margin: 35px; }
+  position: relative;
+  top: 400px;
+  left: -13%;
+  cursor: pointer; }
